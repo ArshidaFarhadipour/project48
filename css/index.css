@@ -891,10 +891,7 @@ line-height:45px;
     line-height: 2;
 }
 
-#product-slider {
-    position: relative;
-    overflow: hidden;
-}
+
 
 .product-slide {
     display: none;
@@ -942,6 +939,42 @@ line-height:45px;
     white-space: nowrap;
 }
 
+/* ===== دسکتاپ - اسلاید تاکسی (دو ستونه مرتب) ===== */
+.mis-features2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.mis-col2 {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 1;
+    min-width: 0;
+}
+
+.mis-col2 > div {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: white;
+    direction: rtl;
+    text-align: right;
+    white-space: normal;
+}
+
+.mis-col2 .check {
+    width: 18px;
+    height: 15px;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
 
 /* ================= responsive products ================= */
 @media(max-width:1105px){
@@ -961,8 +994,8 @@ line-height:45px;
     padding: 28px 20px 60px;
     border-radius: 16px;
     gap: 0;
-    height:1030px;
-    padding-bottom: 8px;
+    height:auto;
+    padding-bottom: 28px;
 
     
 
@@ -1042,46 +1075,43 @@ h4 {
     flex-shrink: 0;
     margin-top: 3px;
 }
-.mis-features {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    margin-top: 22px;
+#product-slider .product-slide[data-slide="1"] .mis-features {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-left: 12px;
-    row-gap: 11px;
-    margin-top: 18px;
+    column-gap: 16px;
+    row-gap: 14px;
+    margin-top: 20px;
     width: 100%;
-    column-gap: 14px;
+    padding: 0;
 }
 
-
-
-.mis-col {
-
+#product-slider .product-slide[data-slide="1"] .mis-col {
+    display: flex;
     flex-direction: column;
-     gap:8px;
-     min-width:30px;
-
-    
+    gap: 12px;
+    min-width: 0;
 }
 
-.mis-col div {
-    font-size: 18px;
-    color: white;
+#product-slider .product-slide[data-slide="1"] .mis-col div {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
-    text-align: right;
-    white-space: normal;
-   display: flex;
-    align-items: flex-start;
-    line-height: 2;
+    gap: 8px;
+    font-size: 15px;
+    line-height: 1.5;
     color: white;
     direction: rtl;
-    margin-top:-10px;
+    text-align: right;
+    white-space: normal;
+    margin: 0;
+    padding: 0;
+}
+
+#product-slider .product-slide[data-slide="1"] .mis-col .check {
+    width: 15px !important;
+    height: 12px !important;
+    margin-top: 3px;
+    flex-shrink: 0;
+    order: -1;
 }
 
 
